@@ -153,10 +153,12 @@ Step 2: Run (percentage table) on the table you just created. Note: table must n
 This will give you the proportion of individuals in table (the list of individuals with the same characteristics you entered) that earn over 50k.
 This is your answer.
 Alternatively, you can do the following:
-(percentage (filter-table wrangled-dataset age wc ed r s hrs))
+(chance-of-over-50k '("46-65" "Private" "Bachelors" "White" "Male" "26-45"))
 Sample input and output:
-> (percentage (filter-table wrangled-dataset "46-65" "Private" "Bachelors" "White" "Male" "26-45"))
+> (chance-of-over-50k '("46-65" "Private" "Bachelors" "White" "Male" "26-45"))
 68 47/71
+
+*Note: To run, you will need to include the package https://github.com/grinnell-cs/csc151.git
 
 To investigate how the combinations of education level, race, and sex contribute to the percentage of individuals earning over $50,000
 Step 1: Create all combinations of education level, race, and sex: 
